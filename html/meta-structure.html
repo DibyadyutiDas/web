@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete HTML meta and structure tags demonstration">
+    <meta name="keywords" content="HTML, meta tags, structure, head, title">
+    <meta name="author" content="HTML Learning Example">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="HTML Meta Structure">
+    <meta property="og:description" content="Learn about HTML meta and structure tags">
+    <meta property="og:type" content="website">
+    <title>HTML Meta & Structure Tags - Complete Example</title>
+    
+    <!-- Link tag for external resources -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="canonical" href="https://example.com/meta-structure.html">
+
+</head>
+<body>
+    <h1>HTML Document Structure and Meta Information</h1>
+    
+    <h2>Document Head Elements</h2>
+    <p>This page demonstrates various elements that go in the HTML head section:</p>
+    
+    <h3>Meta Tags Used in This Document</h3>
+    <ul>
+        <li><code>charset="UTF-8"</code> - Character encoding</li>
+        <li><code>viewport</code> - Responsive design settings</li>
+        <li><code>description</code> - Page description for search engines</li>
+        <li><code>keywords</code> - Keywords for SEO (less important now)</li>
+        <li><code>author</code> - Page author information</li>
+        <li><code>robots</code> - Search engine indexing instructions</li>
+        <li><code>og:title, og:description, og:type</code> - Open Graph for social media</li>
+    </ul>
+    
+    <h2>Base Element Example</h2>
+    <p>If we had a base element, all relative links would be relative to that base URL.</p>
+    <!-- <base href="https://example.com/"> -->
+    
+    <h2>Link Elements</h2>
+    <p>Link elements (in the head) can reference:</p>
+    <ul>
+        <li>CSS stylesheets</li>
+        <li>Favicons</li>
+        <li>Canonical URLs</li>
+        <li>Alternate versions</li>
+        <li>RSS feeds</li>
+    </ul>
+    
+    <h2>Script Placement</h2>
+    <p>Scripts can be placed in the head or body. Here's a simple inline script:</p>
+    
+    <script>
+        function showAlert() {
+            alert("Hello from JavaScript!");
+        }
+        
+        function getCurrentTime() {
+            const now = new Date();
+            document.getElementById('current-time').textContent = now.toLocaleString();
+        }
+    </script>
+    
+    <button onclick="showAlert()">Click for Alert</button>
+    <button onclick="getCurrentTime()">Show Current Time</button>
+    <p>Current time: <span id="current-time">Click button to see time</span></p>
+    
+    <h2>No Script Content</h2>
+    <noscript>
+        <p style="color: red; font-weight: bold;">
+            JavaScript is disabled in your browser. Some features may not work properly.
+        </p>
+    </noscript>
+    
+    <h2>Document Structure Elements</h2>
+    
+    <h3>HTML5 Semantic Elements</h3>
+    <article>
+        <header>
+            <h4>Article Header</h4>
+            <p>Published on <time datetime="2024-01-15">January 15, 2024</time></p>
+        </header>
+        
+        <section>
+            <h5>Article Section</h5>
+            <p>This is the main content of the article. Articles are self-contained pieces of content.</p>
+        </section>
+        
+        <aside>
+            <h5>Article Sidebar</h5>
+            <p>Related information or sidebar content for this article.</p>
+        </aside>
+        
+        <footer>
+            <p>Article footer with additional information.</p>
+        </footer>
+    </article>
+    
+    <h3>Figure and Figcaption</h3>
+    <figure>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello, World!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        <figcaption>Figure 1: Basic HTML document structure</figcaption>
+    </figure>
+    
+    <h2>Comments in HTML</h2>
+    <!-- This is an HTML comment - it won't be visible on the page -->
+    <p>HTML comments are written between &lt;!-- and --&gt; tags.</p>
+    <!--
+        Multi-line comments
+        can span several lines
+        like this
+    -->
+    
+    <h2>Character Entities Reference</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Character</th>
+                <th>Entity Name</th>
+                <th>Entity Number</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>&lt;</td>
+                <td>&amp;lt;</td>
+                <td>&amp;#60;</td>
+                <td>Less than</td>
+            </tr>
+            <tr>
+                <td>&gt;</td>
+                <td>&amp;gt;</td>
+                <td>&amp;#62;</td>
+                <td>Greater than</td>
+            </tr>
+            <tr>
+                <td>&amp;</td>
+                <td>&amp;amp;</td>
+                <td>&amp;#38;</td>
+                <td>Ampersand</td>
+            </tr>
+            <tr>
+                <td>&quot;</td>
+                <td>&amp;quot;</td>
+                <td>&amp;#34;</td>
+                <td>Quotation mark</td>
+            </tr>
+            <tr>
+                <td>&copy;</td>
+                <td>&amp;copy;</td>
+                <td>&amp;#169;</td>
+                <td>Copyright</td>
+            </tr>
+            <tr>
+                <td>&reg;</td>
+                <td>&amp;reg;</td>
+                <td>&amp;#174;</td>
+                <td>Registered trademark</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h2>Document Information</h2>
+    <dl>
+        <dt>Document Type:</dt>
+        <dd>HTML5</dd>
+        
+        <dt>Language:</dt>
+        <dd>English (en)</dd>
+        
+        <dt>Character Encoding:</dt>
+        <dd>UTF-8</dd>
+        
+        <dt>Viewport:</dt>
+        <dd>Responsive (width=device-width, initial-scale=1.0)</dd>
+    </dl>
+    
+    <footer>
+        <hr>
+        <p><a href="index.html">Back to Home</a></p>
+        <p><small>This page demonstrates HTML document structure and meta information.</small></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Text Content Tags - Complete Examples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        blockquote {
+            margin: 20px 0;
+            padding: 15px 20px;
+            border-left: 4px solid #007acc;
+            background-color: #f9f9f9;
+            font-style: italic;
+        }
+        pre {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+            overflow-x: auto;
+        }
+        dl {
+            border: 1px solid #ddd;
+            padding: 15px;
+            background-color: #f9f9f9;
+        }
+        dt {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        dd {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HTML Text Content Tags</h1>
+        <p>Complete demonstration of text content HTML tags</p>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Paragraphs and Line Breaks</h2>
+            <p>This is a basic paragraph element. Paragraphs are block-level elements that contain text content.</p>
+            
+            <p>This paragraph demonstrates line breaks.<br>
+            This is on a new line due to the br tag.<br>
+            And this is another line break example.</p>
+            
+            <p>Multiple<br><br>line<br><br>breaks<br><br>create<br><br>spacing.</p>
+        </section>
+        
+        <section>
+            <h2>Horizontal Rules</h2>
+            <p>Horizontal rules create thematic breaks between content:</p>
+            <hr>
+            <p>Content after the first horizontal rule.</p>
+            <hr>
+            <p>Content after the second horizontal rule.</p>
+        </section>
+        
+        <section>
+            <h2>Blockquotes and Citations</h2>
+            
+            <p>Short inline quote: <q>To be or not to be, that is the question.</q></p>
+            
+            <blockquote>
+                <p>This is a longer quote that stands alone as a block element. It is often used for longer quotations or excerpts from other sources.</p>
+            </blockquote>
+            
+            <blockquote cite="https://example.com">
+                <p>"The only way to do great work is to love what you do."</p>
+                <footer>— Steve Jobs</footer>
+            </blockquote>
+            
+            <blockquote cite="https://www.gutenberg.org">
+                <p>"It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity..."</p>
+                <cite>A Tale of Two Cities by Charles Dickens</cite>
+            </blockquote>
+            
+            <p>According to the book <cite>HTML for Beginners</cite>, proper markup is important for accessibility and SEO.</p>
+        </section>
+        
+        <section>
+            <h2>Preformatted Text</h2>
+            <p>The pre element preserves whitespace and formatting:</p>
+            <pre>
+function greetUser(name) {
+    if (name) {
+        console.log("Hello, " + name + "!");
+    } else {
+        console.log("Hello, World!");
+    }
+}
+
+greetUser("Alice");
+greetUser();
+            </pre>
+            
+            <p>Preformatted text with special characters:</p>
+            <pre>
+ASCII Art:
+   /\_/\  
+  ( o.o ) 
+   > ^ <
+            </pre>
+        </section>
+        
+        <section>
+            <h2>Lists</h2>
+            
+            <h3>Ordered Lists</h3>
+            <ol>
+                <li>First item in ordered list</li>
+                <li>Second item in ordered list</li>
+                <li>Third item in ordered list
+                    <ol>
+                        <li>Nested ordered list item</li>
+                        <li>Another nested item</li>
+                    </ol>
+                </li>
+                <li>Fourth item in ordered list</li>
+            </ol>
+            
+            <h3>Unordered Lists</h3>
+            <ul>
+                <li>First item in unordered list</li>
+                <li>Second item in unordered list</li>
+                <li>Third item in unordered list
+                    <ul>
+                        <li>Nested unordered list item</li>
+                        <li>Another nested item</li>
+                    </ul>
+                </li>
+                <li>Fourth item in unordered list</li>
+            </ul>
+            
+            <h3>Description Lists</h3>
+            <dl>
+                <dt>HTML</dt>
+                <dd>HyperText Markup Language - the standard markup language for web pages</dd>
+                
+                <dt>CSS</dt>
+                <dd>Cascading Style Sheets - used for styling and layout of web pages</dd>
+                
+                <dt>JavaScript</dt>
+                <dd>A programming language used to create dynamic and interactive web content</dd>
+                <dd>Also known as ECMAScript</dd>
+                
+                <dt>API</dt>
+                <dt>Application Programming Interface</dt>
+                <dd>A set of protocols and tools for building software applications</dd>
+            </dl>
+        </section>
+        
+        <section>
+            <h2>Mixed Content Example</h2>
+            <p>Here's a paragraph that combines multiple text content elements:</p>
+            
+            <blockquote>
+                <p><strong>Important Quote:</strong> "The future belongs to those who learn more skills and combine them in creative ways."</p>
+                <cite>— Robert Greene</cite>
+            </blockquote>
+            
+            <p>This quote relates to web development because:</p>
+            <ol>
+                <li>HTML provides <em>structure</em></li>
+                <li>CSS adds <em>styling</em></li>
+                <li>JavaScript enables <em>interactivity</em></li>
+            </ol>
+            
+            <hr>
+            
+            <p>As the saying goes: <q>Practice makes perfect</q>.<br>
+            Keep coding and learning!</p>
+        </section>
+        
+        <section>
+            <h2>Tags Summary</h2>
+            <p>This page demonstrates all text content tags:</p>
+            <ul>
+                <li><code>&lt;p&gt;</code> - Paragraphs</li>
+                <li><code>&lt;br&gt;</code> - Line breaks</li>
+                <li><code>&lt;hr&gt;</code> - Horizontal rules</li>
+                <li><code>&lt;blockquote&gt;</code> - Block quotations</li>
+                <li><code>&lt;q&gt;</code> - Inline quotations</li>
+                <li><code>&lt;cite&gt;</code> - Citations</li>
+                <li><code>&lt;pre&gt;</code> - Preformatted text</li>
+                <li><code>&lt;ol&gt;</code> - Ordered lists</li>
+                <li><code>&lt;ul&gt;</code> - Unordered lists</li>
+                <li><code>&lt;li&gt;</code> - List items</li>
+                <li><code>&lt;dl&gt;</code> - Description lists</li>
+                <li><code>&lt;dt&gt;</code> - Description terms</li>
+                <li><code>&lt;dd&gt;</code> - Description definitions</li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <hr>
+        <p><small>&copy; 2024 HTML Text Content Examples. All text content tags demonstrated.</small></p>
+    </footer>
+</body>
+</html>

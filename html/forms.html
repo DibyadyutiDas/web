@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms & Inputs - Complete Examples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        fieldset {
+            margin: 20px 0;
+            padding: 15px;
+            border: 2px solid #ccc;
+        }
+        legend {
+            font-weight: bold;
+            padding: 0 10px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px 0;
+            font-weight: bold;
+        }
+        input, textarea, select, button {
+            margin: 5px 0;
+            padding: 5px;
+        }
+        output {
+            font-weight: bold;
+            color: #007acc;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HTML Forms & Input Tags - Complete Examples</h1>
+        <p>Comprehensive demonstration of all form and input HTML tags</p>
+    </header>
+    
+    <main>
+        <form action="/submit" method="post" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Personal Information</legend>
+                
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone">
+                
+                <label for="website">Website:</label>
+                <input type="url" id="website" name="website">
+                
+                <label for="birthday">Birthday:</label>
+                <input type="date" id="birthday" name="birthday">
+                
+                <label for="appointment">Appointment Time:</label>
+                <input type="datetime-local" id="appointment" name="appointment">
+                
+                <label for="worktime">Work Time:</label>
+                <input type="time" id="worktime" name="worktime">
+                
+                <label for="birthmonth">Birth Month:</label>
+                <input type="month" id="birthmonth" name="birthmonth">
+                
+                <label for="graduation">Graduation Week:</label>
+                <input type="week" id="graduation" name="graduation">
+            </fieldset>
+            
+            <fieldset>
+                <legend>Preferences & Settings</legend>
+                
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="18" max="100">
+                
+                <label for="salary">Salary Range:</label>
+                <input type="range" id="salary" name="salary" min="30000" max="150000" step="5000" value="75000">
+                <output for="salary" id="salaryOutput">$75,000</output>
+                
+                <label for="favoritecolor">Favorite Color:</label>
+                <input type="color" id="favoritecolor" name="favoritecolor" value="#ff0000">
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <label for="avatar">Profile Picture:</label>
+                <input type="file" id="avatar" name="avatar" accept="image/*">
+                
+                <label for="documents">Documents (Multiple):</label>
+                <input type="file" id="documents" name="documents" multiple>
+                
+                <label for="hidden-field">Hidden Field (not visible):</label>
+                <input type="hidden" id="hidden-field" name="sessionId" value="abc123">
+            </fieldset>
+            
+            <fieldset>
+                <legend>Choices & Options</legend>
+                
+                <label>Gender:</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+                
+                <br><br>
+                
+                <label>Interests (Check all that apply):</label>
+                <input type="checkbox" id="sports" name="interests" value="sports">
+                <label for="sports">Sports</label>
+                
+                <input type="checkbox" id="music" name="interests" value="music">
+                <label for="music">Music</label>
+                
+                <input type="checkbox" id="travel" name="interests" value="travel">
+                <label for="travel">Travel</label>
+                
+                <input type="checkbox" id="reading" name="interests" value="reading">
+                <label for="reading">Reading</label>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Dropdown Selections</legend>
+                
+                <label for="country">Country:</label>
+                <select id="country" name="country">
+                    <option value="">Select a country</option>
+                    <option value="us">United States</option>
+                    <option value="ca">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="de">Germany</option>
+                    <option value="fr">France</option>
+                </select>
+                
+                <label for="skills">Programming Skills (Multiple):</label>
+                <select id="skills" name="skills" multiple size="4">
+                    <optgroup label="Frontend">
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="js">JavaScript</option>
+                        <option value="react">React</option>
+                    </optgroup>
+                    <optgroup label="Backend">
+                        <option value="python">Python</option>
+                        <option value="java">Java</option>
+                        <option value="nodejs">Node.js</option>
+                        <option value="php">PHP</option>
+                    </optgroup>
+                </select>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Text Input & Data Lists</legend>
+                
+                <label for="biography">Biography:</label>
+                <textarea id="biography" name="biography" rows="4" cols="50" 
+                          placeholder="Tell us about yourself..."></textarea>
+                
+                <label for="browser">Favorite Browser:</label>
+                <input list="browsers" id="browser" name="browser">
+                <datalist id="browsers">
+                    <option value="Chrome">
+                    <option value="Firefox">
+                    <option value="Safari">
+                    <option value="Edge">
+                    <option value="Opera">
+                </datalist>
+                
+                <label for="search">Search:</label>
+                <input type="search" id="search" name="search" placeholder="Search...">
+            </fieldset>
+            
+            <fieldset>
+                <legend>Form Controls</legend>
+                
+                <button type="submit">Submit Form</button>
+                <button type="reset">Reset Form</button>
+                <button type="button" onclick="alert('Button clicked!')">Custom Action</button>
+                
+                <br><br>
+                
+                <input type="submit" value="Submit (Input)">
+                <input type="reset" value="Reset (Input)">
+                <input type="button" value="Button (Input)" onclick="alert('Input button clicked!')">
+                
+                <input type="image" src="https://via.placeholder.com/80x30/007acc/white?text=Submit" 
+                       alt="Submit" width="80" height="30">
+            </fieldset>
+        </form>
+        
+        <section>
+            <h2>Form Elements Summary</h2>
+            <p>This page demonstrates all form and input related tags:</p>
+            <ul>
+                <li><code>&lt;form&gt;</code> - Form container</li>
+                <li><code>&lt;input&gt;</code> - Various input types (text, email, tel, url, date, datetime-local, time, month, week, number, range, color, password, file, hidden, radio, checkbox, search, submit, reset, button, image)</li>
+                <li><code>&lt;label&gt;</code> - Input labels</li>
+                <li><code>&lt;textarea&gt;</code> - Multi-line text input</li>
+                <li><code>&lt;button&gt;</code> - Button elements</li>
+                <li><code>&lt;select&gt;</code> - Dropdown selections</li>
+                <li><code>&lt;option&gt;</code> - Selection options</li>
+                <li><code>&lt;optgroup&gt;</code> - Option grouping</li>
+                <li><code>&lt;fieldset&gt;</code> - Form section grouping</li>
+                <li><code>&lt;legend&gt;</code> - Fieldset titles</li>
+                <li><code>&lt;datalist&gt;</code> - Predefined options</li>
+                <li><code>&lt;output&gt;</code> - Form output display</li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <hr>
+        <p><small>&copy; 2024 HTML Form Examples. All form and input tags demonstrated.</small></p>
+    </footer>
+    
+    <script>
+        // Update salary output
+        const salaryRange = document.getElementById('salary');
+        const salaryOutput = document.getElementById('salaryOutput');
+        
+        salaryRange.addEventListener('input', function() {
+            salaryOutput.textContent = '$' + parseInt(this.value).toLocaleString();
+        });
+    </script>
+</body>
+</html>

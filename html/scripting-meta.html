@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Scripting & Meta Tags - Complete Examples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .example {
+            margin: 15px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        code {
+            background-color: #f0f0f0;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HTML Scripting & Meta Tags</h1>
+        <p>Demonstration of scripting, meta, and interactive HTML tags</p>
+    </header>
+    
+    <main>
+        <section>
+            <h2>NoScript Element</h2>
+            <div class="example">
+                <p>The content below will only show if JavaScript is disabled:</p>
+                <noscript>
+                    <div style="color: red; font-weight: bold; border: 2px solid red; padding: 10px;">
+                        ⚠️ JavaScript is disabled in your browser. Some features may not work properly.
+                        Please enable JavaScript for the best experience.
+                    </div>
+                </noscript>
+                <script>
+                    document.write('<div style="color: green; font-weight: bold;">✅ JavaScript is enabled and working!</div>');
+                </script>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Template Element</h2>
+            <div class="example">
+                <p>Templates are used to hold client-side content that won't be rendered when the page loads:</p>
+                
+                <template id="product-template">
+                    <div class="product">
+                        <h3 class="product-name"></h3>
+                        <p class="product-price"></p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </template>
+                
+                <div id="product-container"></div>
+                <button onclick="addProduct()">Add Sample Product</button>
+                
+                <script>
+                    function addProduct() {
+                        const template = document.getElementById('product-template');
+                        const clone = template.content.cloneNode(true);
+                        
+                        clone.querySelector('.product-name').textContent = 'Sample Product';
+                        clone.querySelector('.product-price').textContent = '$19.99';
+                        
+                        document.getElementById('product-container').appendChild(clone);
+                    }
+                </script>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Slot Element (Web Components)</h2>
+            <div class="example">
+                <p>Slots are used in web components for content projection:</p>
+                <template id="my-component">
+                    <style>
+                        .wrapper {
+                            border: 2px solid #007acc;
+                            padding: 10px;
+                            margin: 10px 0;
+                        }
+                    </style>
+                    <div class="wrapper">
+                        <h3><slot name="title">Default Title</slot></h3>
+                        <div><slot>Default content goes here</slot></div>
+                    </div>
+                </template>
+                
+                <my-custom-element>
+                    <span slot="title">Custom Title</span>
+                    <p>This is custom content inside the component!</p>
+                </my-custom-element>
+                
+                <script>
+                    class MyCustomElement extends HTMLElement {
+                        constructor() {
+                            super();
+                            const shadow = this.attachShadow({mode: 'open'});
+                            const template = document.getElementById('my-component');
+                            shadow.appendChild(template.content.cloneNode(true));
+                        }
+                    }
+                    customElements.define('my-custom-element', MyCustomElement);
+                </script>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Details and Summary</h2>
+            <div class="example">
+                <details>
+                    <summary>Click to expand: What are HTML details?</summary>
+                    <p>The <code>&lt;details&gt;</code> element creates a disclosure widget where information is visible only when toggled open. The <code>&lt;summary&gt;</code> element provides a summary or label for the details content.</p>
+                    <ul>
+                        <li>Great for FAQ sections</li>
+                        <li>Collapsible content areas</li>
+                        <li>Progressive disclosure of information</li>
+                    </ul>
+                </details>
+                
+                <details open>
+                    <summary>This section is open by default</summary>
+                    <p>You can use the <code>open</code> attribute to make details expanded by default.</p>
+                </details>
+                
+                <details>
+                    <summary>Nested Details Example</summary>
+                    <p>Details can be nested inside each other:</p>
+                    <details>
+                        <summary>Inner Details</summary>
+                        <p>This is content inside nested details elements.</p>
+                        <details>
+                            <summary>Even Deeper</summary>
+                            <p>You can nest as deep as needed!</p>
+                        </details>
+                    </details>
+                </details>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Dialog Element</h2>
+            <div class="example">
+                <dialog id="sample-dialog">
+                    <form method="dialog">
+                        <h3>Sample Dialog</h3>
+                        <p>This is a native HTML dialog element!</p>
+                        <label for="user-input">Enter your name:</label><br>
+                        <input type="text" id="user-input" name="userInput"><br><br>
+                        <button type="submit" value="ok">OK</button>
+                        <button type="submit" value="cancel">Cancel</button>
+                    </form>
+                </dialog>
+                
+                <button onclick="document.getElementById('sample-dialog').showModal()">
+                    Open Modal Dialog
+                </button>
+                
+                <button onclick="document.getElementById('sample-dialog').show()">
+                    Open Non-Modal Dialog
+                </button>
+                
+                <button onclick="document.getElementById('sample-dialog').close()">
+                    Close Dialog
+                </button>
+                
+                <script>
+                    const dialog = document.getElementById('sample-dialog');
+                    dialog.addEventListener('close', function() {
+                        console.log('Dialog closed with return value:', dialog.returnValue);
+                    });
+                </script>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Progress and Meter Elements</h2>
+            <div class="example">
+                <h4>Progress Examples:</h4>
+                <p>File upload progress: <progress value="70" max="100">70%</progress></p>
+                <p>Indeterminate progress: <progress></progress></p>
+                
+                <h4>Meter Examples:</h4>
+                <p>Disk usage: <meter value="6" min="0" max="10">6 out of 10</meter></p>
+                <p>Score: <meter value="0.8" min="0" max="1">80%</meter></p>
+                <p>Temperature: <meter value="35" min="0" max="50" optimum="20" high="30">35°C</meter></p>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Script Demonstrations</h2>
+            <div class="example">
+                <button onclick="showDateTime()">Show Current Date/Time</button>
+                <div id="datetime-display"></div>
+                
+                <script>
+                    function showDateTime() {
+                        const now = new Date();
+                        document.getElementById('datetime-display').innerHTML = 
+                            '<p><strong>Current Date/Time:</strong> ' + now.toLocaleString() + '</p>';
+                    }
+                </script>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Tags Summary</h2>
+            <p>This page demonstrates scripting and meta tags:</p>
+            <ul>
+                <li><code>&lt;noscript&gt;</code> - Content for users without JavaScript</li>
+                <li><code>&lt;template&gt;</code> - Client-side templates</li>
+                <li><code>&lt;slot&gt;</code> - Web component content placeholders</li>
+                <li><code>&lt;details&gt;</code> - Disclosure/collapsible content</li>
+                <li><code>&lt;summary&gt;</code> - Summary for details elements</li>
+                <li><code>&lt;dialog&gt;</code> - Modal and non-modal dialogs</li>
+                <li><code>&lt;progress&gt;</code> - Progress indicators</li>
+                <li><code>&lt;meter&gt;</code> - Scalar measurements</li>
+                <li><code>&lt;script&gt;</code> - JavaScript code</li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <hr>
+        <p><small>&copy; 2024 HTML Scripting Examples. All scripting and meta tags demonstrated.</small></p>
+    </footer>
+</body>
+</html>

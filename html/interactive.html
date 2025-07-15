@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive HTML Elements</title>
+</head>
+<body>
+    <h1>Interactive HTML Elements</h1>
+    
+    <h2>Details and Summary</h2>
+    <details>
+        <summary>Click to expand: What is HTML?</summary>
+        <p>HTML (HyperText Markup Language) is the standard markup language for creating web pages. It describes the structure of web pages using markup.</p>
+        <ul>
+            <li>HTML elements are represented by tags</li>
+            <li>HTML tags label pieces of content</li>
+            <li>Browsers use tags to render content</li>
+        </ul>
+    </details>
+    
+    <details open>
+        <summary>This section is open by default</summary>
+        <p>You can make a details element open by default using the "open" attribute.</p>
+    </details>
+    
+    <details>
+        <summary>Nested Details Example</summary>
+        <p>You can also nest details elements:</p>
+        <details>
+            <summary>Inner Details</summary>
+            <p>This is content inside nested details.</p>
+        </details>
+    </details>
+    
+    <h2>Progress Bars</h2>
+    <p>Download progress:</p>
+    <progress value="70" max="100">70%</progress>
+    
+    <p>Loading...</p>
+    <progress></progress>
+    
+    <p>Completion: <progress value="0.6">60%</progress></p>
+    
+    <h2>Meter Element</h2>
+    <p>Disk usage: <meter value="6" min="0" max="10">6 out of 10</meter></p>
+    <p>Score: <meter value="0.6">60%</meter></p>
+    <p>Temperature: <meter value="35" min="0" max="50" optimum="20" high="30">35°C</meter></p>
+    
+    <h2>Output Element</h2>
+    <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+        <input type="range" id="a" name="a" value="50"> +
+        <input type="number" id="b" name="b" value="10"> =
+        <output name="result" for="a b">60</output>
+    </form>
+    
+    <h2>Fieldset and Legend</h2>
+    <fieldset>
+        <legend>Personal Information</legend>
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+    </fieldset>
+    
+    <fieldset disabled>
+        <legend>Disabled Fieldset</legend>
+        <label for="disabled-input">This input is disabled:</label>
+        <input type="text" id="disabled-input" name="disabled-input" value="Cannot edit">
+    </fieldset>
+    
+    <h2>Datalist (Input Suggestions)</h2>
+    <label for="browsers">Choose a browser:</label>
+    <input list="browser-list" id="browsers" name="browsers">
+    <datalist id="browser-list">
+        <option value="Chrome">
+        <option value="Firefox">
+        <option value="Safari">
+        <option value="Edge">
+        <option value="Opera">
+    </datalist>
+    
+    <h2>Button Types</h2>
+    <button type="button" onclick="alert('Hello!')">Click Me</button>
+    <button type="submit">Submit Button</button>
+    <button type="reset">Reset Button</button>
+    <button disabled>Disabled Button</button>
+    
+    <h2>Input Types Showcase</h2>
+    <form>
+        <fieldset>
+            <legend>Various Input Types</legend>
+            
+            <label for="text-input">Text:</label>
+            <input type="text" id="text-input" placeholder="Enter text"><br><br>
+            
+            <label for="password-input">Password:</label>
+            <input type="password" id="password-input"><br><br>
+            
+            <label for="email-input">Email:</label>
+            <input type="email" id="email-input" placeholder="user@example.com"><br><br>
+            
+            <label for="url-input">URL:</label>
+            <input type="url" id="url-input" placeholder="https://example.com"><br><br>
+            
+            <label for="tel-input">Phone:</label>
+            <input type="tel" id="tel-input" placeholder="+1-234-567-8900"><br><br>
+            
+            <label for="search-input">Search:</label>
+            <input type="search" id="search-input" placeholder="Search..."><br><br>
+            
+            <label for="number-input">Number:</label>
+            <input type="number" id="number-input" min="1" max="100" step="1"><br><br>
+            
+            <label for="range-input">Range:</label>
+            <input type="range" id="range-input" min="0" max="100" value="50"><br><br>
+            
+            <label for="date-input">Date:</label>
+            <input type="date" id="date-input"><br><br>
+            
+            <label for="time-input">Time:</label>
+            <input type="time" id="time-input"><br><br>
+            
+            <label for="datetime-input">DateTime Local:</label>
+            <input type="datetime-local" id="datetime-input"><br><br>
+            
+            <label for="month-input">Month:</label>
+            <input type="month" id="month-input"><br><br>
+            
+            <label for="week-input">Week:</label>
+            <input type="week" id="week-input"><br><br>
+            
+            <label for="color-input">Color:</label>
+            <input type="color" id="color-input" value="#ff0000"><br><br>
+            
+            <label for="file-input">File:</label>
+            <input type="file" id="file-input" multiple><br><br>
+            
+            <input type="hidden" name="hidden-field" value="hidden-value">
+            
+            <input type="checkbox" id="checkbox1" name="option1">
+            <label for="checkbox1">Option 1</label><br>
+            
+            <input type="radio" id="radio1" name="choice" value="choice1">
+            <label for="radio1">Choice 1</label><br>
+            <input type="radio" id="radio2" name="choice" value="choice2">
+            <label for="radio2">Choice 2</label><br><br>
+            
+            <button type="submit">Submit Form</button>
+            <button type="reset">Reset Form</button>
+        </fieldset>
+    </form>
+    
+    <footer>
+        <p><a href="index.html">Back to Home</a></p>
+    </footer>
+</body>
+</html>

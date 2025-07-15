@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Media & Embeds - Complete Examples</title>
+</head>
+<body>
+    <header>
+        <h1>HTML Media & Embed Tags</h1>
+        <p>Complete demonstration of all media and embed HTML tags</p>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Images</h2>
+            <img src="https://via.placeholder.com/300x200/4CAF50/white?text=Sample+Image" 
+                 alt="Sample placeholder image" 
+                 width="300" 
+                 height="200">
+            <p>Basic image with alt text, width, and height attributes.</p>
+        </section>
+        
+        <section>
+            <h2>Audio</h2>
+            <audio controls>
+                <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" type="audio/wav">
+                <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <p>Audio element with multiple source formats and fallback text.</p>
+        </section>
+        
+        <section>
+            <h2>Video</h2>
+            <video width="400" height="300" controls>
+                <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4">
+                <source src="https://sample-videos.com/zip/10/webm/SampleVideo_1280x720_1mb.webm" type="video/webm">
+                <track kind="subtitles" src="subtitles_en.vtt" srclang="en" label="English">
+                <track kind="subtitles" src="subtitles_es.vtt" srclang="es" label="Spanish">
+                Your browser does not support the video tag.
+            </video>
+            <p>Video element with multiple sources, tracks for subtitles, and fallback text.</p>
+        </section>
+        
+        <section>
+            <h2>Canvas</h2>
+            <canvas id="myCanvas" width="300" height="150" style="border:1px solid #000;">
+                Your browser does not support the HTML5 canvas tag.
+            </canvas>
+            <p>Canvas element for drawing graphics with JavaScript.</p>
+            
+            <script>
+                var canvas = document.getElementById('myCanvas');
+                var ctx = canvas.getContext('2d');
+                
+                // Draw a red rectangle
+                ctx.fillStyle = '#FF0000';
+                ctx.fillRect(10, 10, 80, 40);
+                
+                // Draw a blue circle
+                ctx.beginPath();
+                ctx.arc(200, 50, 30, 0, 2 * Math.PI);
+                ctx.fillStyle = '#0000FF';
+                ctx.fill();
+                
+                // Draw text
+                ctx.fillStyle = '#000000';
+                ctx.font = '16px Arial';
+                ctx.fillText('Canvas Example', 50, 100);
+            </script>
+        </section>
+        
+        <section>
+            <h2>SVG</h2>
+            <svg width="300" height="150" style="border:1px solid #000;">
+                <rect x="10" y="10" width="80" height="40" fill="red" />
+                <circle cx="200" cy="50" r="30" fill="blue" />
+                <text x="50" y="100" font-family="Arial" font-size="16" fill="black">SVG Example</text>
+            </svg>
+            <p>Inline SVG graphics with shapes and text.</p>
+        </section>
+        
+        <section>
+            <h2>iFrame</h2>
+            <iframe src="https://www.example.com" 
+                    width="400" 
+                    height="300" 
+                    title="Example Website">
+                <p>Your browser does not support iframes.</p>
+            </iframe>
+            <p>iFrame element for embedding external web content.</p>
+        </section>
+        
+        <section>
+            <h2>Embed</h2>
+            <embed src="https://www.adobe.com/content/dam/acom/en/devnet/acrobat/pdfs/pdf_open_parameters.pdf" 
+                   type="application/pdf" 
+                   width="400" 
+                   height="300">
+            <p>Embed element for embedding external content like PDFs.</p>
+        </section>
+        
+        <section>
+            <h2>Object with Parameters</h2>
+            <object data="https://www.adobe.com/content/dam/acom/en/devnet/acrobat/pdfs/pdf_open_parameters.pdf" 
+                    type="application/pdf" 
+                    width="400" 
+                    height="300">
+                <param name="toolbar" value="0">
+                <param name="navpanes" value="0">
+                <param name="scrollbar" value="0">
+                <p>Your browser does not support the object element.</p>
+            </object>
+            <p>Object element with param elements for configuration.</p>
+        </section>
+        
+        <section>
+            <h2>Picture Element (Responsive Images)</h2>
+            <picture>
+                <source media="(min-width: 800px)" 
+                        srcset="https://via.placeholder.com/800x400/FF5722/white?text=Large+Image">
+                <source media="(min-width: 400px)" 
+                        srcset="https://via.placeholder.com/400x200/FFC107/white?text=Medium+Image">
+                <img src="https://via.placeholder.com/200x100/2196F3/white?text=Small+Image" 
+                     alt="Responsive image example">
+            </picture>
+            <p>Picture element with source elements for responsive images.</p>
+        </section>
+    </main>
+    
+    <footer>
+        <hr>
+        <p><small>&copy; 2024 HTML Media Examples. All media and embed tags demonstrated.</small></p>
+    </footer>
+</body>
+</html>
