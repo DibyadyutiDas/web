@@ -12,34 +12,16 @@
             padding: 20px;
             line-height: 1.6;
         }
-        fieldset {
-            margin: 20px 0;
-            padding: 15px;
-            border: 2px solid #ccc;
-        }
-        legend {
-            font-weight: bold;
-            padding: 0 10px;
-        }
         label {
             display: block;
             margin: 10px 0 5px 0;
             font-weight: bold;
         }
-        input, textarea, select, button {
-            margin: 5px 0;
-            padding: 5px;
-        }
-        output {
-            font-weight: bold;
-            color: #007acc;
-        }
     </style>
 </head>
 <body>
     <header>
-        <h1>HTML Forms & Input Tags - Complete Examples</h1>
-        <p>Comprehensive demonstration of all form and input HTML tags</p>
+        <h1>HTML Forms & Input Tags</h1>
     </header>
     
     <main>
@@ -48,16 +30,16 @@
                 <legend>Personal Information</legend>
                 
                 <label for="fullname">Full Name:</label>
-                <input type="text" id="fullname" name="fullname" required>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name">
                 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
                 
                 <label for="phone">Phone:</label>
-                <input type="tel" id="phone" name="phone">
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
                 
                 <label for="website">Website:</label>
-                <input type="url" id="website" name="website">
+                <input type="url" id="website" name="website" placeholder="Enter your website URL">
                 
                 <label for="birthday">Birthday:</label>
                 <input type="date" id="birthday" name="birthday">
@@ -68,9 +50,6 @@
                 <label for="worktime">Work Time:</label>
                 <input type="time" id="worktime" name="worktime">
                 
-                <label for="birthmonth">Birth Month:</label>
-                <input type="month" id="birthmonth" name="birthmonth">
-                
                 <label for="graduation">Graduation Week:</label>
                 <input type="week" id="graduation" name="graduation">
             </fieldset>
@@ -79,7 +58,7 @@
                 <legend>Preferences & Settings</legend>
                 
                 <label for="age">Age:</label>
-                <input type="number" id="age" name="age" min="18" max="100">
+                <input type="number" id="age" name="age" min="1" max="100" step="1" value="18">
                 
                 <label for="salary">Salary Range:</label>
                 <input type="range" id="salary" name="salary" min="30000" max="150000" step="5000" value="75000">
@@ -105,29 +84,25 @@
                 <legend>Choices & Options</legend>
                 
                 <label>Gender:</label>
-                <input type="radio" id="male" name="gender" value="male">
-                <label for="male">Male</label>
+
+                <label for="male"><input type="radio" id="male" name="gender" value="male">Male</label>
                 
-                <input type="radio" id="female" name="gender" value="female">
-                <label for="female">Female</label>
+                <label for="female"><input type="radio" id="female" name="gender" value="female">Female</label>
                 
-                <input type="radio" id="other" name="gender" value="other">
-                <label for="other">Other</label>
+                <label for="other"><input type="radio" id="other" name="gender" value="other">Other</label>
                 
-                <br><br>
+                <br>
                 
                 <label>Interests (Check all that apply):</label>
-                <input type="checkbox" id="sports" name="interests" value="sports">
-                <label for="sports">Sports</label>
+
+                <label for="sports"><input type="checkbox" id="sports" name="interests" value="sports">Sports</label>
                 
-                <input type="checkbox" id="music" name="interests" value="music">
-                <label for="music">Music</label>
+                <label for="music"><input type="checkbox" id="music" name="interests" value="music">Music</label>
                 
-                <input type="checkbox" id="travel" name="interests" value="travel">
-                <label for="travel">Travel</label>
+                <label for="travel"><input type="checkbox" id="travel" name="interests" value="travel">Travel</label>
                 
-                <input type="checkbox" id="reading" name="interests" value="reading">
-                <label for="reading">Reading</label>
+                <label for="reading"><input type="checkbox" id="reading" name="interests" value="reading">Reading</label>
+
             </fieldset>
             
             <fieldset>
@@ -136,27 +111,12 @@
                 <label for="country">Country:</label>
                 <select id="country" name="country">
                     <option value="">Select a country</option>
+                    <option value="in">India</option>
                     <option value="us">United States</option>
                     <option value="ca">Canada</option>
                     <option value="uk">United Kingdom</option>
                     <option value="de">Germany</option>
                     <option value="fr">France</option>
-                </select>
-                
-                <label for="skills">Programming Skills (Multiple):</label>
-                <select id="skills" name="skills" multiple size="4">
-                    <optgroup label="Frontend">
-                        <option value="html">HTML</option>
-                        <option value="css">CSS</option>
-                        <option value="js">JavaScript</option>
-                        <option value="react">React</option>
-                    </optgroup>
-                    <optgroup label="Backend">
-                        <option value="python">Python</option>
-                        <option value="java">Java</option>
-                        <option value="nodejs">Node.js</option>
-                        <option value="php">PHP</option>
-                    </optgroup>
                 </select>
             </fieldset>
             
@@ -200,7 +160,7 @@
         </form>
         
         <section>
-            <h2>Form Elements Summary</h2>
+            <h2>Form Elements</h2>
             <p>This page demonstrates all form and input related tags:</p>
             <ul>
                 <li><code>&lt;form&gt;</code> - Form container</li>
@@ -210,10 +170,6 @@
                 <li><code>&lt;button&gt;</code> - Button elements</li>
                 <li><code>&lt;select&gt;</code> - Dropdown selections</li>
                 <li><code>&lt;option&gt;</code> - Selection options</li>
-                <li><code>&lt;optgroup&gt;</code> - Option grouping</li>
-                <li><code>&lt;fieldset&gt;</code> - Form section grouping</li>
-                <li><code>&lt;legend&gt;</code> - Fieldset titles</li>
-                <li><code>&lt;datalist&gt;</code> - Predefined options</li>
                 <li><code>&lt;output&gt;</code> - Form output display</li>
             </ul>
         </section>
@@ -221,17 +177,7 @@
     
     <footer>
         <hr>
-        <p><small>&copy; 2024 HTML Form Examples. All form and input tags demonstrated.</small></p>
+        <p><small>&copy;All form elements are created by Dibyadyuti Das.</small></p>
     </footer>
-    
-    <script>
-        // Update salary output
-        const salaryRange = document.getElementById('salary');
-        const salaryOutput = document.getElementById('salaryOutput');
-        
-        salaryRange.addEventListener('input', function() {
-            salaryOutput.textContent = '$' + parseInt(this.value).toLocaleString();
-        });
-    </script>
 </body>
 </html>
